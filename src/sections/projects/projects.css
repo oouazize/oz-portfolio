@@ -1,0 +1,29 @@
+#portfolio {
+	@media (min-width: 768px) {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3rem;
+
+		@media (min-width: 380px) {
+			font-size: 4rem;
+		}
+
+		@media (min-width: 1140px) {
+			font-size: 5rem;
+		}
+	}
+
+	p {
+		max-width: 700px;
+		margin: 0 auto 1rem;
+
+		a {
+			color: #f4a949;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

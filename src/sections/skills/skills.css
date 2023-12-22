@@ -1,0 +1,101 @@
+#skillsPage {
+	/* h2 {
+		text-transform: uppercase;
+		font-weight: 300;
+		opacity: 0.7;
+		display: none;
+		margin-bottom: 0;
+		font-size: 1rem;
+		padding-right: 1rem;
+		@media (min-width: 768px) {
+			font-size: 1.2rem;
+			display: block;
+		}
+	} */
+
+	h1 {
+		font-size: 3rem;
+
+		@media (min-width: 380px) {
+			font-size: 4rem;
+		}
+
+		@media (min-width: 1140px) {
+			font-size: 5rem;
+		}
+	}
+
+	p {
+		max-width: 700px;
+		@media (min-width: 768px) {
+			margin: 0 auto 1rem;
+		}
+
+		a {
+			color: #f4a949;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.skills_brands {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+		margin-right: auto;
+		margin-left: auto;
+
+		@media (min-width: 768px) {
+			max-width: 1000px;
+			justify-content: center;
+		}
+
+		div {
+			text-align: center;
+			margin: 0 0 30px 0;
+			font-size: 16px;
+			width: 25%;
+			display: grid;
+			place-items: center;
+			gap: 1rem;
+
+			@media (min-width: 430px) {
+				font-size: inherit;
+			}
+
+			@media (min-width: 768px) {
+				width: auto;
+			}
+
+			p {
+				margin: 0;
+				margin-top: 1rem;
+				@media (min-width: 430px) {
+					margin: 0 0 0 10px;
+				}
+				@media (min-width: 768px) {
+					margin: 0;
+				}
+			}
+
+			svg {
+				width: 50px;
+				height: 40px;
+			}
+
+			@media (min-width: 768px) {
+				margin: 0 30px 1rem;
+				font-size: inherit;
+				svg {
+					width: 50px;
+					height: 50px;
+				}
+			}
+
+			@media (min-width: 1030px) {
+				margin: 0 30px 3rem;
+			}
+		}
+	}
+}
