@@ -60,9 +60,9 @@ export default function Slide({ id }: { id: string }) {
 					<h2 className="uppercase font-light opacity-70 mb-0 md:text-lg">
 						{header}
 					</h2>
-					<h1 className="text-6xl mb-4 md:mb-8 mt-2">{title}</h1>
-					<p className="text-lg my-4">{desc}</p>
-					<p className="text-lg mb-6 md:mb-12">
+					<h1 className="text-5xl md:text-6xl mb-2 md:mb-8 mt-2">{title}</h1>
+					<p className="text-lg my-2 md:my-4">{desc}</p>
+					<p className="text-lg mb-2 md:mb-12">
 						<strong>Built with: </strong>
 						{tech}
 					</p>

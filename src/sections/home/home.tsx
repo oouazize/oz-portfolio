@@ -53,7 +53,7 @@ export default function Home() {
 					<h1 className=" text-4xl lg:text-6xl flex flex-wrap font-bold items-center">
 						Front-End Software Developer
 					</h1>
-					<p className="py-8">
+					<p className="py-4 md:py-8">
 						Resolving design problems, building smart user interfaces and useful
 						interactions, developing rich web applications and seamless web
 						experiences.

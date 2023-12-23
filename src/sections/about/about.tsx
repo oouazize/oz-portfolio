@@ -12,15 +12,10 @@ export default function About() {
 		observer.current = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					entry.target.classList.remove("animate__fadeOutUp");
-					entry.target.classList.remove("animate__slower");
 					entry.target.classList.add("animate__animated");
 					entry.target.classList.add("animate__slideInUp");
 				} else {
 					entry.target.classList.remove("animate__slideInUp");
-					entry.target.classList.add("animate__animated");
-					entry.target.classList.add("animate__fadeOutUp");
-					entry.target.classList.add("animate__slower");
 				}
 			});
 		});

@@ -1,6 +1,7 @@
 import "@/App.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Fullpage from "@/fullPage";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
 	return (
@@ -29,6 +30,7 @@ const App = () => {
 			</div>
 			<div className="box-shadow"></div>
 			<Fullpage />
+			<Analytics />
 		</>
 	);
 };
