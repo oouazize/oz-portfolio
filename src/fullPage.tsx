@@ -10,7 +10,7 @@ const Fullpage = () => (
 		credits={{ enabled: false }}
 		navigation={true}
 		anchors={["home", "about", "skills", "projects", "contact"]}
-		navigationTooltips={["0", "1", "2", "3", "4"]}
+		navigationTooltips={["home", "about", "skills", "projects", "contact"]}
 		controlArrows={false}
 		slidesNavigation={true}
 		render={() => {

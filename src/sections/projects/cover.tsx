@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Cover() {
 	return (
 		<div className="slide" id="portfolio">
@@ -22,12 +24,15 @@ export default function Cover() {
 				</a>{" "}
 				for more projects
 			</p>
-			<a
+			<motion.a
+				whileHover={{
+					x: [0, 20, 0, 20],
+				}}
 				className="text-yellowColor font-semibold cursor-pointer"
 				href="#projects/1"
 			>
 				See Projects {">"}
-			</a>
+			</motion.a>
 		</div>
 	);
 }

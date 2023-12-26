@@ -3,9 +3,9 @@ import { skills } from ".";
 import "./skills.css";
 import { useState } from "react";
 import { useEffectOnUpdate } from "@/Hooks/useEffectOnUpdate";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const FadeInUpVariant = {
+const FadeInUpVariants = {
 	initial: {
 		opacity: 0,
 		y: 100,
@@ -16,7 +16,7 @@ const FadeInUpVariant = {
 		transition: {
 			delay: 0.015 * index,
 			duration: 0.6,
-		}
+		},
 	}),
 };
 
@@ -41,7 +41,7 @@ export default function Skills() {
 		return (
 			<motion.div
 				key={index}
-				variants={FadeInUpVariant}
+				variants={FadeInUpVariants}
 				initial="initial"
 				whileInView={"animate"}
 				custom={index}
@@ -61,14 +61,21 @@ export default function Skills() {
 					A problem is a chance for you to do your best
 				</h2>
 				<h1 className="font-bold">Skills</h1>
-				{sectionHeight > 820 ? <p>
-					The main area of expertise is front end development<br /><br />HTML, CSS, JS, building small and medium web applications with React,
-					and coding interactive layouts. I have also full-stack developer
-					experience with Nest
-				</p> : <p>
-				The main area of expertise is front end development. I have also full-stack developer
-					experience with Nest
-				</p>}
+				{sectionHeight > 820 ? (
+					<p>
+						The main area of expertise is front end development
+						<br />
+						<br />
+						HTML, CSS, JS, building small and medium web applications with
+						React, and coding interactive layouts. I have also full-stack
+						developer experience with Nest
+					</p>
+				) : (
+					<p>
+						The main area of expertise is front end development. I have also
+						full-stack developer experience with Nest
+					</p>
+				)}
 
 				<p>
 					Visit my{" "}

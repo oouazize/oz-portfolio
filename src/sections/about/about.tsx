@@ -3,13 +3,11 @@ import romb from "@/assets/yellow_romb1.png";
 import Code from "@/code";
 import { motion } from "framer-motion";
 
-const FadeInUpVariant = {
+const FadeInUpVariants = {
 	initial: {
-		opacity: 0,
 		y: 100,
 	},
 	animate: {
-		opacity: 1,
 		y: 0,
 		transition: {
 			duration: 0.6,
@@ -35,7 +33,7 @@ export default function About() {
 			/>
 			<motion.main
 				id="me"
-				variants={FadeInUpVariant}
+				variants={FadeInUpVariants}
 				initial="initial"
 				whileInView={"animate"}
 			>

@@ -2,7 +2,7 @@ import world from "@/assets/AnimationWorld.json";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 
-const FadeInUpVariant = {
+const FadeInUpVariants = {
 	initial: {
 		opacity: 0,
 		y: 100,
@@ -25,7 +25,7 @@ export default function Contact() {
 				</div>
 				<motion.div
 					className="flex flex-col justify-center md:items-center lg:items-start md:max-w-[330px] text-left"
-					variants={FadeInUpVariant}
+					variants={FadeInUpVariants}
 					initial="initial"
 					whileInView={"animate"}
 				>

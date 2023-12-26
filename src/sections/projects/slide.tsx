@@ -89,7 +89,6 @@ export default function Slide({ id }: { id: string }) {
 					<img
 						src={images[key]}
 						draggable="false"
-						loading="lazy"
 					/>
 				</div>
 			</div>

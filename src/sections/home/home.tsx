@@ -3,11 +3,11 @@ import dots from "@/assets/side-dots.png";
 import Code from "@/code";
 import Dev from "@/assets/AnimationDeveloper.json";
 import Lottie from "lottie-react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const FadeInUpVariant = {
+const FadeInUpVariants = {
 	initial: {
-		y: 200,
+		y: -200,
 	},
 	animate: {
 		y: 0,
@@ -27,18 +27,18 @@ export default function Home() {
 				draggable="false"
 			></img>
 			<motion.img
-				variants={FadeInUpVariant}
+				variants={FadeInUpVariants}
 				initial="initial"
-				whileInView={"animate"}
+				whileInView="animate"
 				className="purple_romb1 hidden md:block bottom-5 right-0 -left-80"
 				src={romb}
 				draggable="false"
 			></motion.img>
 			<main>
 				<motion.div
-					variants={FadeInUpVariant}
+					variants={FadeInUpVariants}
 					initial="initial"
-					whileInView={"animate"}
+					whileInView="animate"
 					className="flex flex-col md:justify-center text-left md:w-3/4"
 				>
 					<h1 className=" text-4xl lg:text-6xl flex flex-wrap font-bold items-center">
@@ -49,12 +49,15 @@ export default function Home() {
 						interactions, developing rich web applications and seamless web
 						experiences.
 					</p>
-					<a
+					<motion.a
 						href="#about"
+						whileHover={{
+							x: [0, 20, 0, 20],
+						}}
 						className="text-yellowColor font-semibold cursor-pointer w-fit"
 					>
 						About me {">"}
-					</a>
+					</motion.a>
 				</motion.div>
 				<div className="flex justify-center items-center">
 					<Lottie className="xl:w-4/5" animationData={Dev} />

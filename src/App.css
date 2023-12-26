@@ -101,13 +101,17 @@ main {
 .btn {
 	border-radius: 8px;
 	border: 3px solid #fafafa;
-	padding: 0.6em 1.6em;
+	padding: 0.4em 1.4em;
 	font-size: 1em;
 	font-weight: 600;
 	cursor: pointer;
 	color: #fafafa;
 	background: transparent;
 	transition: all 0.3s ease-in-out;
+
+	@media (min-width: 768px) {
+		padding: 0.6em 1.6em;
+	}
 }
 .btn:hover {
 	color: #13111c;
@@ -142,10 +146,10 @@ main {
 	ul {
 		border-right: 3px solid rgb(160, 160, 160);
 		li {
-			display: grid !important;
-			place-items: center;
+			display: flex !important;
+			align-items: center;
 			margin-right: -3px !important;
-			width: 50px !important;
+			width: 70px !important;
 			height: 50px !important;
 			.active {
 				transition: border-right 0.3s ease-in-out;
@@ -195,4 +199,8 @@ main {
 			height: 50px !important;
 		}
 	}
+}
+
+::-webkit-scrollbar {
+	display: none;
 }

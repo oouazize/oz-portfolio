@@ -1,13 +1,39 @@
 import "@/App.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Fullpage from "@/fullPage";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
+import { motion } from "framer-motion";
+
+const LogoVariants = {
+	initial: {
+		opacity: 0,
+		y: '-100%',
+	},
+	animate: {
+		opacity: 1,
+		y: 0,
+	},
+};
 
 const App = () => {
 	return (
 		<>
 			<header className="fixed flex justify-between items-center w-full top-2 md:top-0 z-50 px-[4%] py-[2%]">
-				<h1 className="logo">OZ</h1>
+				<motion.h1
+					className="logo flex"
+					variants={LogoVariants}
+					initial="initial"
+					whileInView="animate"
+					transition={{
+						type: "spring",
+						stiffness: 140,
+						repeat: Infinity,
+						repeatType: "loop",
+						repeatDelay: 4,
+					}}
+				>
+					OZ
+				</motion.h1>
 				<a href="#contact" className="btn">
 					Contact
 				</a>
