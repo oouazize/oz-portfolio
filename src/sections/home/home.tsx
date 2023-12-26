@@ -61,11 +61,6 @@ export default function Home() {
 				</motion.div>
 				<div className="flex justify-center items-center">
 					<Lottie className="xl:w-4/5" animationData={Dev} />
-					{/* <img
-						className="h-[430px] p-8 md:p-0 md:h-[80%]"
-						src={desktop}
-						draggable="false"
-					/> */}
 				</div>
 			</main>
 		</section>

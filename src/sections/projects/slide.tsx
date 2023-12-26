@@ -2,6 +2,7 @@ import Pong from "@/assets/Pong.png";
 import MarketHub from "@/assets/MarketHub.png";
 import Webserv from "@/assets/webserver.png";
 import { useMemo } from "react";
+import { motion } from 'framer-motion';
 
 type project = {
 	title: string;
@@ -66,23 +67,29 @@ export default function Slide({ id }: { id: string }) {
 						<strong>Built with: </strong>
 						{tech}
 					</p>
-					<a
+					<motion.a
 						className={`block w-fit font-bold mb-2 ${!demo && color}`}
 						href={link}
+						whileHover={{
+							x: [0, 20, 0, 20],
+						}}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						View the code {" >"}
-					</a>
+					</motion.a>
 					{demo && (
-						<a
+						<motion.a
 							className={`block w-fit font-bold ${color}`}
 							href={demo}
+							whileHover={{
+								x: [0, 20, 0, 20],
+							}}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							View the demo {" >"}
-						</a>
+						</motion.a>
 					)}
 				</div>
 				<div className="flex justify-center items-center md:w-3/5">

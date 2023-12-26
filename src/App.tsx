@@ -19,7 +19,8 @@ const App = () => {
 	return (
 		<>
 			<header className="fixed flex justify-between items-center w-full top-2 md:top-0 z-50 px-[4%] py-[2%]">
-				<motion.h1
+				<motion.a
+					href="#home"
 					className="logo flex"
 					variants={LogoVariants}
 					initial="initial"
@@ -33,7 +34,7 @@ const App = () => {
 					}}
 				>
 					OZ
-				</motion.h1>
+				</motion.a>
 				<a href="#contact" className="btn">
 					Contact
 				</a>
