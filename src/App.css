@@ -30,6 +30,7 @@ h1 {
 
 .logo {
 	font-size: 2.5rem;
+	font-family: Source Sans Pro, Teko;
 
 	@media (min-width: 768px) {
 		font-size: 4rem;

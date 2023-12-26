@@ -21,7 +21,7 @@ const App = () => {
 			<header className="fixed flex justify-between items-center w-full top-2 md:top-0 z-50 px-[4%] py-[2%]">
 				<motion.a
 					href="#home"
-					className="logo flex"
+					className="logo"
 					variants={LogoVariants}
 					initial="initial"
 					whileInView="animate"
