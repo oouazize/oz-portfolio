@@ -1,44 +1,34 @@
-import { useEffectOnUpdate } from "@/Hooks/useEffectOnUpdate";
 import world from "@/assets/AnimationWorld.json";
 import Lottie from "lottie-react";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+
+const FadeInUpVariant = {
+	initial: {
+		opacity: 0,
+		y: 100,
+	},
+	animate: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.6,
+		},
+	},
+};
 
 export default function Contact() {
-	const observer = useRef<IntersectionObserver>({} as IntersectionObserver);
-
-	useEffectOnUpdate(() => {
-		observer.current = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.remove("animate__fadeOutUp");
-					entry.target.classList.remove("animate__slower");
-					entry.target.classList.add("animate__animated");
-					entry.target.classList.add("animate__slideInUp");
-				} else {
-					entry.target.classList.remove("animate__slideInUp");
-					entry.target.classList.add("animate__animated");
-					entry.target.classList.add("animate__fadeOutUp");
-					entry.target.classList.add("animate__slower");
-				}
-			});
-		});
-
-		const slideInUp = document.querySelectorAll(".slideInUp");
-		slideInUp.forEach((item) => observer.current.observe(item));
-
-		// Cleanup function to disconnect the observer when the component unmounts
-		return () => {
-			observer.current.disconnect();
-		};
-	}, []);
-
 	return (
 		<section className="section" id="contactPage">
 			<main id="contactMe">
 				<div className="min-w-[210px] grid place-content-center">
 					<Lottie animationData={world} />
 				</div>
-				<div className="slideInUp flex flex-col justify-center md:items-center lg:items-start md:max-w-[330px] text-left">
+				<motion.div
+					className="flex flex-col justify-center md:items-center lg:items-start md:max-w-[330px] text-left"
+					variants={FadeInUpVariant}
+					initial="initial"
+					whileInView={"animate"}
+				>
 					<p>
 						What would you do if you had a software expert available at your
 						fingertips?
@@ -70,7 +60,7 @@ export default function Contact() {
 							</a>
 						</h1>
 					</div>
-				</div>
+				</motion.div>
 			</main>
 		</section>
 	);

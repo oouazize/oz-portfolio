@@ -13,7 +13,6 @@ const Fullpage = () => (
 		navigationTooltips={["0", "1", "2", "3", "4"]}
 		controlArrows={false}
 		slidesNavigation={true}
-		scrollingSpeed={1300}
 		render={() => {
 			return (
 				<ReactFullpage.Wrapper>

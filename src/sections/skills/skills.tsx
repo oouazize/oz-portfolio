@@ -1,12 +1,26 @@
 import Code from "@/code";
 import { skills } from ".";
 import "./skills.css";
-import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { useEffectOnUpdate } from "@/Hooks/useEffectOnUpdate";
+import { motion } from 'framer-motion';
+
+const FadeInUpVariant = {
+	initial: {
+		opacity: 0,
+		y: 100,
+	},
+	animate: (index: number) => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: 0.015 * index,
+			duration: 0.6,
+		}
+	}),
+};
 
 export default function Skills() {
-	const [ref, InView] = useInView();
 	const [sectionHeight, setSectionHeight] = useState(0);
 
 	useEffectOnUpdate(() => {
@@ -23,17 +37,19 @@ export default function Skills() {
 		};
 	}, []);
 
-	const icons = skills.map((skill) => {
+	const icons = skills.map((skill, index) => {
 		return (
-			<div
-				ref={ref}
-				key={skill.name}
-				className={`${InView ? "animate__animated animate__fadeInUp" : ""}`}
+			<motion.div
+				key={index}
+				variants={FadeInUpVariant}
+				initial="initial"
+				whileInView={"animate"}
+				custom={index}
 				style={{ animationDelay: skill.seconds }}
 			>
 				{skill.svg}
 				<p>{skill.name}</p>
-			</div>
+			</motion.div>
 		);
 	});
 

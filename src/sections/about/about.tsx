@@ -1,33 +1,23 @@
-import { useEffectOnUpdate } from "@/Hooks/useEffectOnUpdate";
 import me from "@/assets/me.png";
-// import romb from "@/assets/purple_romb1.png";
 import romb from "@/assets/yellow_romb1.png";
 import Code from "@/code";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+
+const FadeInUpVariant = {
+	initial: {
+		opacity: 0,
+		y: 100,
+	},
+	animate: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.6,
+		},
+	},
+};
 
 export default function About() {
-	const observer = useRef<IntersectionObserver>({} as IntersectionObserver);
-
-	useEffectOnUpdate(() => {
-		observer.current = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add("animate__animated");
-					entry.target.classList.add("animate__slideInUp");
-				} else {
-					entry.target.classList.remove("animate__slideInUp");
-				}
-			});
-		});
-
-		const slideInDown = document.querySelectorAll(".slideInDown");
-		slideInDown.forEach((item) => observer.current.observe(item));
-
-		// Cleanup function to disconnect the observer when the component unmounts
-		return () => {
-			observer.current.disconnect();
-		};
-	}, []);
 	return (
 		<section className="section" id="aboutPage">
 			<Code xCord="-right-[560px]" yCord="-bottom-[52%]" />
@@ -43,7 +33,12 @@ export default function About() {
 				draggable="false"
 				loading="lazy"
 			/>
-			<main id="me" className="slideInDown">
+			<motion.main
+				id="me"
+				variants={FadeInUpVariant}
+				initial="initial"
+				whileInView={"animate"}
+			>
 				<div className="text-left pt-4">
 					<h1 className="text-5xl lg:text-6xl font-bold">
 						Hi, I'm
@@ -68,7 +63,7 @@ export default function About() {
 						projects with like-minded teams.
 					</p>
 				</div>
-			</main>
+			</motion.main>
 		</section>
 	);
 }
