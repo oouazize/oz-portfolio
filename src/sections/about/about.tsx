@@ -49,16 +49,16 @@ export default function About() {
 				</div>
 				<div className="flex justify-center items-center text-left 4xl:m-auto max-w-3xl">
 					<p className="xl:right-8 relative md:mr-4 font-medium">
-						Professionally connected with the web development industry.
+						Professionally involved in web development.
 						<br />
 						<br />
-						Problem solver, well-organised person, unwavering attention to
-						detail, and an avid runner
+						An organizer, problem solver, detail-obsessed individual, and
+						passionate runner
 						<br />
 						<br />
 						Passionate about the entire web spectrum, thriving in collaborative
-						environments, embracing the opportunity to contribute to innovative
-						projects with like-minded teams.
+						environments, enjoying working on innovative projects with
+						like-minded individuals.
 					</p>
 				</div>
 			</motion.main>

@@ -160,6 +160,7 @@ main {
 				top: auto !important;
 				width: auto !important;
 				opacity: 1 !important;
+				font-family: Inter, Poppins, Helvetica, Arial !important;
 			}
 			span {
 				display: none;
