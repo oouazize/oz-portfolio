@@ -1,6 +1,6 @@
 import me from "@/assets/me.png";
 import romb from "@/assets/yellow_romb1.png";
-import Code from "@/code";
+import Code from "@/components/code";
 import { motion } from "framer-motion";
 
 const FadeInUpVariants = {

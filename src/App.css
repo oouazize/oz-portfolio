@@ -144,6 +144,7 @@ main {
 
 #fp-nav {
 	margin-right: 3%;
+	z-index: 45 !important;
 	ul {
 		border-right: 3px solid rgb(160, 160, 160);
 		li {

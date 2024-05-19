@@ -1,4 +1,4 @@
-import Code from "@/code";
+import Code from "@/components/code";
 import { skills } from ".";
 import "./skills.css";
 import { useState } from "react";
@@ -63,18 +63,14 @@ export default function Skills() {
 				<h1 className="font-bold">Skills</h1>
 				{sectionHeight > 820 ? (
 					<p>
-						The main area of expertise is front end development
+						The main area of expertise is web development
 						<br />
 						<br />
 						HTML, CSS, JS, building small and medium web applications with
-						React, and coding interactive layouts. I have also full-stack
-						developer experience with Nest
+						React/Next.js, Node.js, and Supabase
 					</p>
 				) : (
-					<p>
-						The main area of expertise is front end development. I have also
-						full-stack developer experience with Nest
-					</p>
+					<p>The main area of expertise is web development.</p>
 				)}
 
 				<p>

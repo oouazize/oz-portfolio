@@ -1,7 +1,7 @@
 import Slide from "./slide";
 import Cover from "./cover";
 import "./projects.css";
-import Code from "@/code";
+import Code from "@/components/code";
 
 export default function Projects() {
 	return (

@@ -2,7 +2,7 @@ import Pong from "@/assets/Pong.png";
 import MarketHub from "@/assets/MarketHub.png";
 import Webserv from "@/assets/webserver.png";
 import { useMemo } from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 type project = {
 	title: string;
@@ -54,7 +54,9 @@ export default function Slide({ id }: { id: string }) {
 		<div className="slide" id={id}>
 			<div
 				className={`flex justify-between gap-4 ${
-					key % 2 ? "flex-col-reverse md:flex-row-reverse" : "flex-col-reverse md:flex-row"
+					key % 2
+						? "flex-col-reverse md:flex-row-reverse"
+						: "flex-col-reverse md:flex-row"
 				}`}
 			>
 				<div className="text-left md:w-2/5">
@@ -93,10 +95,7 @@ export default function Slide({ id }: { id: string }) {
 					)}
 				</div>
 				<div className="flex justify-center items-center md:w-3/5">
-					<img
-						src={images[key]}
-						draggable="false"
-					/>
+					<img src={images[key]} draggable="false" />
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 import romb from "@/assets/yellow_romb1.png";
 import dots from "@/assets/side-dots.png";
-import Code from "@/code";
+import Code from "@/components/code";
 import Dev from "@/assets/AnimationDeveloper.json";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
@@ -42,7 +42,7 @@ export default function Home() {
 					className="flex flex-col md:justify-center text-left md:w-3/4"
 				>
 					<h1 className=" text-4xl lg:text-6xl flex flex-wrap font-bold items-center">
-						Front-End Software Developer
+						Software Developer
 					</h1>
 					<p className="py-4 md:py-8">
 						Resolving design problems, building smart user interfaces and useful

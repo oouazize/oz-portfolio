@@ -3,11 +3,13 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Fullpage from "@/fullPage";
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import FileViewer from "./components/fileViewer";
 
 const LogoVariants = {
 	initial: {
 		opacity: 0,
-		y: '-100%',
+		y: "-100%",
 	},
 	animate: {
 		opacity: 1,
@@ -16,6 +18,7 @@ const LogoVariants = {
 };
 
 const App = () => {
+	const [isClicked, setIsClicked] = useState(false);
 	return (
 		<>
 			<header className="fixed flex justify-between items-center w-full top-2 md:top-0 z-50 px-[4%] py-[2%]">
@@ -35,8 +38,8 @@ const App = () => {
 				>
 					OZ
 				</motion.a>
-				<a href="#contact" className="btn">
-					Contact
+				<a className="btn" onClick={() => setIsClicked((prev) => !prev)}>
+					RESUME
 				</a>
 			</header>
 			<div className="hidden md:flex fixed bottom-[4%] left-[4%] gap-4 z-50">
@@ -58,6 +61,12 @@ const App = () => {
 			<div className="box-shadow"></div>
 			<Fullpage />
 			<Analytics />
+			{isClicked && (
+				<FileViewer
+					fileUrl="/src/assets/OUSSAMA-OUAZIZE-CV.pdf"
+					onClose={() => setIsClicked(false)}
+				/>
+			)}
 		</>
 	);
 };
