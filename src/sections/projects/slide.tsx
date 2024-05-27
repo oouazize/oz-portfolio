@@ -1,6 +1,6 @@
-import Pong from "@/assets/Pong.png";
-import MarketHub from "@/assets/MarketHub.png";
-import Webserv from "@/assets/webserver.png";
+import Pong from "@/public/Pong.png";
+import MarketHub from "@/public/MarketHub.png";
+import Webserv from "@/public/webserver.png";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 

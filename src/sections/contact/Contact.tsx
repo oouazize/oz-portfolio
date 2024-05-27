@@ -1,4 +1,4 @@
-import world from "@/assets/AnimationWorld.json";
+import world from "@/public/AnimationWorld.json";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 
