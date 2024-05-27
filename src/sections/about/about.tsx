@@ -1,5 +1,5 @@
-import me from "@/public/me.png";
-import romb from "@/public/yellow_romb1.png";
+import me from "/public/me.png";
+import romb from "/public/yellow_romb1.png";
 import Code from "@/components/code";
 import { motion } from "framer-motion";
 

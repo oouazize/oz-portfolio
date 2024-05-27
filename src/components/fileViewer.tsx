@@ -47,7 +47,7 @@ const FileViewer = ({ fileUrl, onClose }: any) => {
           {content}
         </div>
         <button
-          className="absolute bottom-2 right-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="absolute bottom-2 right-2 bg-yellowColor hover:bg-amber-500 text-white font-bold py-2 px-4 rounded"
           onClick={onClose}
           aria-label="Close"
         >
