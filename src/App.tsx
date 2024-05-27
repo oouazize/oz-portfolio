@@ -63,7 +63,7 @@ const App = () => {
 			<Analytics />
 			{isClicked && (
 				<FileViewer
-					fileUrl="/public/OUSSAMA-OUAZIZE-CV.pdf"
+					fileUrl="/OUSSAMA-OUAZIZE-CV.pdf"
 					onClose={() => setIsClicked(false)}
 				/>
 			)}

@@ -1,7 +1,7 @@
 import romb from "/public/yellow_romb1.png";
 import dots from "/public/side-dots.png";
 import Code from "@/components/code";
-import Dev from "/public/AnimationDeveloper.json";
+import Dev from "../../../public/AnimationDeveloper.json";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 
