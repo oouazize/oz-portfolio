@@ -58,6 +58,17 @@ export default function Home() {
 					>
 						About me {">"}
 					</motion.a>
+					<h2
+						className={
+							"inline-flex w-fit items-center space-x-2 mt-4" +
+							" rounded-full bg-gradient-to-br from-gray-200 via-gray-400" +
+							"to-gray-700 bg-clip-text px-4 pr-8 py-2 text-center text-sm" +
+							" font-normal text-gray-300 text-transparent shadow" +
+							" shadow-yellowColor/50"
+						}
+					>
+						<span>Version old, new version coming soon</span>
+					</h2>
 				</motion.div>
 				<div className="flex justify-center items-center">
 					<Lottie className="xl:w-4/5" animationData={Dev} />
